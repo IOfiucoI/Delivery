@@ -8,7 +8,7 @@
     &__heading {
         text-align: center;
         color: v.$secundario;
-
+        font-size: 1.8rem;
     }
 
     &__grid {
@@ -17,5 +17,25 @@
         }
     }
 
-    &__imagen {}
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__imagen {
+        border-radius: 1rem;
+    }
+    &__texto{
+        line-height: 1.5;
+        color: v.$secundario;
+    }
+    &__enlace{
+        @include m.boton(v.$primario, v.$blanco);
+        width: auto;
+
+    }
+
+
 }
