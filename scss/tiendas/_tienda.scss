@@ -2,10 +2,14 @@
 @use '../base/variables' as v;
 
 .tienda {
-    display: flex ;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 
+    &__grid{
+        @include m.grid(2, 2rem);
+
+    }
     &__heading, &__texto{
         text-align: center;
         color: v.$secundario;
@@ -13,23 +17,18 @@
 
     &__heading {
         font-size: 3.6rem;
-        margin: 0;
+        margin: 2rem 0 0 0;
     }
 
     &__texto{
         margin: 1rem 0 3rem 0;
     }
 
-    &__grid{
-        @include m.grid(2, 2rem);
-
-    }
-
     &__enlace{
         transition-property: transform;
-        transform: rotate(500ms);
+        transform: duration(900ms);
         &:hover{
-            transform: scale(0.3);
+            transform: scale(1.1);
         }
     }
 }
